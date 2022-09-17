@@ -5,7 +5,7 @@ module.exports = secret = (secretName) => {
     } else if (process.env.NODE_ENV === 'stage') {
         let secret = {
             dbUrl:
-                'dburl',
+                'mongodb://localhost:27017',
             secretOrKey: 'jwt secret',
             email: 'mailer',
             emailPassword: 'email password', // if google
@@ -18,7 +18,7 @@ module.exports = secret = (secretName) => {
     } else {
         let secret = {
             dbUrl:
-                'dburl',
+                'mongodb://localhost:27017/course',
             secretOrKey: 'jwt secret',
             email: 'mailer',
             emailPassword: 'email password', // if google
