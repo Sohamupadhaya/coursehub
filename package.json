@@ -1,0 +1,58 @@
+{
+  "name": "express-mongo-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js -e json,js,yaml,yml"
+  },
+  "dependencies": {
+    "@google-cloud/logging-winston": "^4.1.2",
+    "@google-cloud/secret-manager": "^3.10.1",
+    "@google-cloud/storage": "^5.18.2",
+    "bcryptjs": "2.4.3",
+    "body-parser": "1.19.0",
+    "chalk": "^4.1.2",
+    "cors": "2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "firebase-admin": "^10.0.2",
+    "google-auth-library": "^7.14.0",
+    "helmet": "^5.0.2",
+    "http-status-code": "^2.1.0",
+    "jsonwebtoken": "8.5.1",
+    "jwt-decode": "3.1.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "mongoose": "5.13.7",
+    "nodemailer": "^6.7.2",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "response-time": "^2.3.2",
+    "swagger-ui-express": "4.1.6",
+    "validator": "^13.7.0",
+    "winston": "3.3.3",
+    "xlsx": "^0.18.2",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "keywords": [
+    "express",
+    "mongoDB",
+    "boilerplate",
+    "jwt",
+    "mongoose",
+    "Nodemailer",
+    "passport",
+    "swagger",
+    "swagger-ui",
+    "winston",
+    "yaml",
+    "firebase push notification"
+  ],
+  "author": "Kirtan Patel",
+  "license": "ISC"
+}
