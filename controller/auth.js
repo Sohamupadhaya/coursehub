@@ -59,7 +59,10 @@ exports.registerUser = async (req, res, cb) => {
             func.sendErrorMessage(HTTPStatusCode.getMessage(400, 'HTTP/1.1'), res, 400, [constant.Errormessage.EmailExist]);
             return;
         }
-
+        // confirmPassword = req.body.confirmPassword
+        // if (confirmPassword != req.body.password) {
+        //     return res.send("Password and confirm password do not match")
+        // }
         const userData = new User({
             firstName: req.body.firstName,
             lastName: req.body.lastName,
@@ -108,6 +111,7 @@ exports.registerUser = async (req, res, cb) => {
 
 exports.registerUserV2 = async (req, res, cb) => {
     try {
+        req.body.socialType=constant.RegisteredWith.EMAIL;
         if (!req.body.socialType) {
             func.sendErrorMessage(HTTPStatusCode.getMessage(400, 'HTTP/1.1'), res, 400, [constant.Errormessage.SocialTypeRequired]);
             return;
@@ -289,6 +293,7 @@ exports.verifyEmail = async (req, res, cb) => {
  */
 exports.login = async (req, res, cb) => {
     try {
+        
         const { errors, isValid } = validateLogin(req.body);
         if (!isValid) {
             func.sendErrorMessage(HTTPStatusCode.getMessage(400, 'HTTP/1.1'), res, 400, errors);
@@ -357,7 +362,7 @@ exports.loginV2 = async (req, res, cb) => {
     try {
         //---------body logger---------
         logger.log.info({ logOf: 'loginV2->req body', data: req.body });
-
+        req.body.socialType=constant.RegisteredWith.EMAIL;
         if (!req.body.socialType) {
             func.sendErrorMessage(HTTPStatusCode.getMessage(400, 'HTTP/1.1'), res, 400, [constant.Errormessage.SocialTypeRequired]);
             return;

@@ -110,7 +110,7 @@ const initSMTPTransport = function () {
     let setting;
 
     setting = {
-        service: 'gmail',
+        service: secret('provider'),
         auth: {
             user: secret('email'),
             pass: secret('emailPassword'),

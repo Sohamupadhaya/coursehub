@@ -22,6 +22,10 @@ const course = new mongoose.Schema(
       type: String,
       required: true,
     },
+    isDelete: {
+      type:Boolean,
+      default: false,
+    },
     slides: [
       {
         slideNo: {

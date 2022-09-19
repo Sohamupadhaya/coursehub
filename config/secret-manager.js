@@ -20,10 +20,10 @@ module.exports = secret = (secretName) => {
             dbUrl:
                 'mongodb://localhost:27017/course',
             secretOrKey: 'jwt secret',
-            email: 'mailer',
-            emailPassword: 'email password', // if google
-            senderName: 'sender name',
-            provider: 'smtp',
+            email: 'patelkirtan231@gmail.com',
+            emailPassword: 'password', // if google
+            senderName: 'Kirtan<noreply@gmail.com>',
+            provider: 'google',
             port: 587,
             secure: true,
         };
