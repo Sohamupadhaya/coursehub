@@ -20,7 +20,6 @@ module.exports = (passport) => {
                     return done(null, false);
                 }).catch((err) => console.log(err));
             let jwt_print = jwt_payload;
-            delete jwt_print['role']['permissions']
             console.log(jwt_print);
         })
     );

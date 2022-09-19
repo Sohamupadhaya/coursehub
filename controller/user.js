@@ -13,3 +13,17 @@ exports.getUserById = async (req,res)=>{
         res.send(err)
     }
 }
+
+exports.getAllUser = async (req,res)=>{
+    try{
+    const allUsers = await User.find();
+    if(allUsers.length === 0){
+        return res.status(204).json({"message":"No Content is Available"})
+    }
+    res.json(allUsers)
+    }
+    catch(err){
+        console.log(err);
+        res.send("error")
+    }
+}

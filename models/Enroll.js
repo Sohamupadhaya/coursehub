@@ -23,7 +23,8 @@ const enroll = new mongoose.Schema(
           required: true,
         },
         visited: {
-          type: false,
+          type: Boolean,
+          default: false,
         }, // boolean
         enteredCode: {
           type: String,
