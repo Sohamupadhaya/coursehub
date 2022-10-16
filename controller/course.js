@@ -4,8 +4,8 @@ const Course = require("../models/Course");
 const { validateCourse } = require("../validations/validateCourse");
 exports.createCourse = async (req, res) => {
   try {
-    const { errors } = validateCourse(req.body);
-    if (errors) {
+    const {errors,isValid} = validateCourse(req.body);
+    if (!isValid) {
       res.send(errors);
       return;
     }
@@ -69,8 +69,8 @@ exports.getAllCourses = async (req, res) => {
 
 exports.updateCourses = async (req, res) => {
   try {
-    const { errors } = validateCourse(req.body);
-    if (errors) {
+    const {errors,isValid} = validateCourse(req.body);
+    if (!isValid) {
       res.send(errors);
       return;
     }

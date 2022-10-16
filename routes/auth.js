@@ -9,7 +9,7 @@ const {
     updateMyProfile,
     registerUserV2,
     changePassword,
-    loginV2
+    loginV2,
 } = require('../controller/auth');
 const passport = require("passport");
 

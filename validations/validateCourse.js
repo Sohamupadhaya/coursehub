@@ -18,9 +18,6 @@ if (isEmpty(data.outcome)){
 if (isEmpty(data.createdBy)){
     errors.push("CreatedBy is not enterd")
   }
-if (isEmpty(data.isDelete)){
-    errors.push("isDelete is not enterd")
-  }
 
 
 if (isEmpty(data.slides[0].slideNo)){
@@ -32,5 +29,8 @@ if (isEmpty(data.slides[0].code)){
 if (isEmpty(data.slides[0].img)){
     errors.push("Image is not enterd")
   }
-  return {errors}
+  return {
+    errors,
+    isValid : isEmpty(errors)
+  }
 }
